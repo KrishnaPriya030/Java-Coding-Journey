@@ -1,0 +1,26 @@
+class Solution{
+
+static void Sunny_number(int n){
+boolean found=false;
+for(int i=1; i*i<=n+1; i++){
+if(i*i==n+1){
+found=true;
+break;
+
+}
+}
+if(found){
+System.out.println("Sunny number");
+}
+else{
+System.out.println("Not sunny number");
+}
+}
+
+
+
+public static void main(String []args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+ Sunny_number(n);
+}
