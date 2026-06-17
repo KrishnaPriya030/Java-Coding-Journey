@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Solution{
 static  void lcm(int a,int b){
 int org_a=a;
