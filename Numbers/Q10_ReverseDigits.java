@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Solution{
 static  void reverse_digits(int n){
 int temp=n;
