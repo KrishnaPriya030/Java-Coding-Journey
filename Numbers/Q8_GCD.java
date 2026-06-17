@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class Solution{
 static int gcd(int a,int b){
 while(b!=0){
