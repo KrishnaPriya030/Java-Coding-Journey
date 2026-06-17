@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class Solution{
 static void perfect_number(int n){
 int sum=0;
