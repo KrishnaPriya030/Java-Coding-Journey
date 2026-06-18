@@ -32,7 +32,7 @@ for(int i=0; i<arr.length; i++){
 import java.util.Scanner;
 class Solution{
 
-static void reverse_array(int [] arr){
+static int [] reverse_array(int [] arr){
 
 int left=0;
 int right=arr.length-1;
@@ -45,27 +45,27 @@ arr[right]=temp;
 left++;
 right--;
 }
-  // Step 2 — print normally left to right
-    for(int i=0; i<arr.length; i++){
-        System.out.print(arr[i] + " ");
-    }
+return arr;
+
 }
+
 public static void main(String [] args){
 
 Scanner sc=new Scanner(System.in);
 int n=sc.nextInt();
 int [] arr=new int [n];
-	
-
 for(int i=0; i<arr.length; i++){
 
-	arr[i]=sc.nextInt();
+arr[i]=sc.nextInt();
 
 }
-reverse_array(arr);
-}
+int [] result=reverse_array(arr);
+
+for(int i=0; i<result.length; i++){
+
+System.out.print(result[i]);
+
 }
 
-
 }
-
+}
