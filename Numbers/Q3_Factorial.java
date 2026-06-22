@@ -1,14 +1,15 @@
 import java.util.Scanner;
 
 class Solution {
+static long fact(long n) {
+    long fact = 1;
 
-    static long fact(long n) {
-        if (n <= 1) {
-            return 1;
-        }
-
-        return n * fact(n - 1);
+    for (long i = 2; i <= n; i++) {
+        fact *= i;
     }
+
+    return fact;
+}
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
