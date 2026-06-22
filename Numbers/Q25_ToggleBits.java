@@ -1,19 +1,10 @@
-class Solution{
+class Solution {
+    public int findComplement(int num) {
 
-static void toggle_bits(int n){
+        int bits = 32 - Integer.numberOfLeadingZeros(num);
 
-int bits = (int)(Math.log(n)/Math.log(2))+ 1;
-int mask = (1 << bits) - 1;
-int result = n ^ mask ;
-System.out.println(result);
+        int mask = (1 << bits) - 1;
 
-}
-public static void main(String [] args){
-
-Scanner sc=new Scanner(System.in);
-
-int n = sc.nextInt();
-
-toggle_bits(n);
-}
+        return num ^ mask;
+    }
 }
