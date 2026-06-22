@@ -1,17 +1,11 @@
 class Solution{
 static void perfect_sqr_check(int n){
-boolean found=false;
-for(int i=1; i*i<=n; i++){
-if(i*i==n){
-found=true;
-break;
-}
-}
-if(found){
-System.out.println("Perfect Number");
+int root=(int)Math.sqrt(n);
+if(root*root==n){
+System.out.println("Perfect Square");
 }
 else{
-System.out.println("Not Perfect Number");
+System.out.println("Not Perfect Square");
 
 }
 }
