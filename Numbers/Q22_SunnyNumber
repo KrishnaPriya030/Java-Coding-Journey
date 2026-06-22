@@ -1,26 +1,25 @@
-class Solution{
+import java.util.Scanner;
 
-static void Sunny_number(int n){
-boolean found=false;
-for(int i=1; i*i<=n+1; i++){
-if(i*i==n+1){
-found=true;
-break;
+class Solution {
 
-}
-}
-if(found){
-System.out.println("Sunny number");
-}
-else{
-System.out.println("Not sunny number");
-}
-}
+    static void sunnyNumber(int n) {
 
+        int root = (int)Math.sqrt(n + 1);
 
+        if(root * root == n + 1) {
+            System.out.println("Sunny Number");
+        }
+        else {
+            System.out.println("Not Sunny Number");
+        }
+    }
 
-public static void main(String []args){
-Scanner sc=new Scanner(System.in);
-int n=sc.nextInt();
- Sunny_number(n);
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        sunnyNumber(n);
+    }
 }
