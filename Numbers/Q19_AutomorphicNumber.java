@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class Solution{
 
 static void Automorphic_number(int n){
@@ -14,9 +15,9 @@ sqr=sqr/10;
 }
 System.out.println("amorphic");
 }
-}
 
-public static void main(Strig [] args){
+
+public static void main(String [] args){
 Scanner sc=new Scanner(System.in);
 int n=sc.nextInt();
 Automorphic_number(n);
