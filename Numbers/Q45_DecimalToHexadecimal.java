@@ -1,25 +1,30 @@
-class Solution{
+import java.util.Scanner;
 
-static void decimal_hexadecimal(int n){
+class Solution {
 
-String hex="";
-String hexdigits="0123456789ABCDEF";
-if(n==0){
-System.out.println("0");
-return;
-}
-while(n>0){
-int rem=n%16;
-hex=hexdigits.charAt(rem)+hex;
-n=n/16;
-}
+    static void decimal_hexadecimal(int n) {
 
-System.out.println(hex);
-}
-public static void main(String [] args){
+        if (n == 0) {
+            System.out.println("0");
+            return;
+        }
 
-Scanner sc=new Scanner(System.in);
-int n=sc.nextInt();
-decimal_hexadecimal(n);
-}
+        String digits = "0123456789ABCDEF";
+        StringBuilder hex = new StringBuilder();
+
+        while (n > 0) {
+            int rem = n % 16;
+            hex.append(digits.charAt(rem));
+            n /= 16;
+        }
+
+        System.out.println(hex.reverse());
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        decimal_hexadecimal(n);
+    }
 }
